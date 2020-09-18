@@ -39,7 +39,7 @@
   * Refer to the lab instruction in the Skillpipe course material, module 11
 * Lab: [Setting up and Running Functional Tests](https://www.azuredevopslabs.com/labs/vstsextend/Selenium/)
 * Lab: [Using Azure Monitor as Release Gate](https://azuredevopslabs.com/labs/vstsextend/releasegates/)
-  * [Fix for a deprecated Azure Monitor Alerts task](Lab%20fix%20-%20Release%20Gate.md)
+  * [Fix for a deprecated Azure Monitor Alerts task](https://ningweinw.github.io/AZ400/Lab%20fix%20-%20Release%20Gate)
 * Lab: Creating a Release Dashboard
   * Refer to the lab instruction in the Skillpipe course material, module 11
 
