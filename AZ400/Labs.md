@@ -13,6 +13,9 @@
 
 ## Module 4: Consolidating Artifacts and Designing a Dependency Management Strategy
 * Lab: [Package Management with Azure Artifacts](https://www.azuredevopslabs.com/labs/azuredevops/packagemanagement/)
+  * In Task 4, the "pack" command with the latest nuget version doesn't pick up the version specified in AssemblyInfo.cs. Solution: use the following two options
+   1. Add property `<Version>x.y.z</Version>` in PartsUnlimited.Shared.csproj
+   2. Or, download nuget version 5.5.1
 
 ## Module 5: Implementing Continuous Integration with Azure Pipelines
 * Lab: [Enabling Continuous Integration with Azure Pipelines](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/
