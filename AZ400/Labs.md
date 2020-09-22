@@ -8,7 +8,7 @@
   * Exercise 1 - 5
 
 ## Module 3: Scaling Git for Enterprise DevOps
-* Lab: [Code Review with Pull Requests](https://www.azuredevopslabs.com/labs/azuredevops/git/)
+* Lab: [Version Controlling with Git in Azure Repos](https://www.azuredevopslabs.com/labs/azuredevops/git/)
   * Exercise 6 - 7
 
 ## Module 4: Consolidating Artifacts and Designing a Dependency Management Strategy
