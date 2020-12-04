@@ -62,9 +62,6 @@
 * Lab: [Deploying a multi-container application to Azure Kubernetes Services](https://azuredevopslabs.com/labs/vstsextend/kubernetes/)
 
 ## Module 17: Third Party Infrastructure as Code Tools available with Azure
-* Lab: [Deploy app with Chef on Azure](http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-DeployappwithChefonAzure.html)
-* Lab: [Deploy app with Puppet on Azure](http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-DeployappwithPuppetonAzure.html)
-* Lab: [Ansible with Azure](http://microsoft.github.io/PartsUnlimitedMRP/iac/200.2x-IaC-AnsiblewithAzure.html)
 * Lab: [Automating your Infrastructure Deployments](https://azuredevopslabs.com/labs/vstsextend/terraform/)
 
 ## Module 18: Implement Compliance and Security in your Infrastructure
