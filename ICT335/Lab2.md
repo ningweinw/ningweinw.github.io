@@ -4,7 +4,7 @@
 In this lab, we will create a Virtual Private Cloud (VPC) and review its configuration. We will then create a Windows server using the Elastic Compute Cloud (EC2) instance and RDP into it.
 
 ## Lab Task Outline
-### Build a Virtual Private Cloud (VPC)
+### 1. Build a Virtual Private Cloud (VPC)
 The architecture is illustrated in the following diagram.  
 ![](images/Lab2-Arch.png)
   - Choose __VPC__ service, __Launch VPC Wizard__
@@ -21,7 +21,7 @@ The architecture is illustrated in the following diagram.
     - Review the three subnets and their associated route tables
     - Review the routes in the route tables, and the route targets
 
-### Build a Windows Server
+### 2. Build a Windows Server
   - Choose __EC2__ service, __Create security group__, with the name of `labvm-sg`. Provide a description, choose VPC: *lab-vpc*. Add the following inboud rules:
     - Type: __SSH__, Source: __Anywhere__
     - Type: __RDP__, Source: __Anywhere__
