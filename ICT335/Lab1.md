@@ -33,3 +33,6 @@ In this lab, we will have an overview of the AWS Educate program and create the 
     - In bucket's __Objects__ tab, select both objects, click __Action__ and select __Make public__
     - Review the ACL settings in each object's __Details__ tab
   - Try to access the static website again, the webpage displays successfully
+
+## Lab Cleanup
+Delete the S3 bucket
