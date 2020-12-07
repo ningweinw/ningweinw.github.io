@@ -35,4 +35,5 @@ In this lab, we will have an overview of the AWS Educate program and create the 
   - Try to access the static website again, the webpage displays successfully
 
 ## Lab Cleanup
-Delete the S3 bucket
+- Delete all the objects in the S3 bucket
+- Delete the bucket
