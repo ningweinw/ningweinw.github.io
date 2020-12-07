@@ -4,6 +4,7 @@
 In this lab, we will have an overview of the AWS Educate program and create the request to join as a student. We will create an AWS account and get familiar with the AWS Management Console. We will then create a static website using the Simple Storage Service (S3).
 
 ## Lab Task Outline
+### 1. AWS Educate and AWS Account
 - Review [AWS Educate](https://aws.amazon.com/education/awseducate/)
 - Join AWS Educate as Student
 - Review [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all) and [AWS Pricing](https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln)
@@ -21,7 +22,9 @@ In this lab, we will have an overview of the AWS Educate program and create the 
   - Set permission by selecting existing policy: __AdministratorAccess__ 
 - Select the newly created user, enable MFA under __Security credentials__
 - Sign out and sign in using the newly created IAM user account
-- Build a static website with Simple Storage Service (S3). The architecture is illustrated in the following picture.
+
+### 2. Build a static website with Simple Storage Service (S3)
+The architecture is illustrated in the following diagram.  
 ![](images/Lab1-Arch.png)
   - Choose __S3__ service, __Create bucket__
   - Select the newly created bucket, enable __Static website hosting__ in __Properties__ tab
