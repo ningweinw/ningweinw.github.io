@@ -36,4 +36,4 @@ In this lab, we will have an overview of the AWS Educate program and create the 
 
 ## Lab Cleanup
 - Delete all the objects in the S3 bucket
-- Delete the bucket
+- Keep the bucket for the future labs
