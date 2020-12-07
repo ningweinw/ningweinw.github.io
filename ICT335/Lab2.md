@@ -36,3 +36,4 @@ In this lab, we will create a Virtual Private Cloud (VPC) and review its configu
 ## Lab Cleanup
 - Terminate the EC2 instance
 - Delete the security group and key pair
+- Keep the VPC for the future labs
