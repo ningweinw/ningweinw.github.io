@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# install packages
+apt update
+
+# packages for CLI tools
+apt install -y mysql-client
+apt install -y stress
+
+# packages for python web app
+apt install -y python3-pip
+apt install -y libmysqlclient-dev
+pip3 install flask
+pip3 install flask-mysql
+
+# set up server files
+mkdir /app
+cd /app
+wget <S3_TAR_URL> -O azure-vote.tar
+tar xvf azure-vote.tar
+
+# start
+export MYSQL_USER="admin"
+export MYSQL_PASSWORD="<MYSQL_PASSWORD>"
+export MYSQL_HOST="<MYSQL_HOST>"
+cd /app/azure-vote
+python3 main.py &
