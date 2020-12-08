@@ -23,7 +23,7 @@ In this lab, we will have an overview of the AWS Educate program and create the 
 - Select the newly created user, enable MFA under __Security credentials__
 - Sign out and sign in using the newly created IAM user account
 
-### 2. Build a static website with Simple Storage Service (S3)
+### 2. Build a Static Website with Simple Storage Service (S3)
 The architecture is illustrated in the following diagram.  
 ![](images/Lab1-Arch.png)
   - Choose __S3__ service, __Create bucket__
