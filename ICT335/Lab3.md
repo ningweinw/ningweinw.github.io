@@ -3,6 +3,8 @@
 ## Lab Overview
 In this lab, we will create a Web Application that runs on an EC2 instance and connects to a database using Relational Database Service (RDS) MySQL.
 
+This lab will reuse the VPC and S3 bucket from the previous labs.
+
 The architecture is illustrated in the following diagram.  
 ![](images/Lab3-Arch.png)
 
