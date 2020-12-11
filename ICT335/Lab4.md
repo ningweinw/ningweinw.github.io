@@ -3,7 +3,7 @@
 ## Lab Overview
 In this lab, we will create a Web Application with EC2 Auto Scaling Group.
 
-This lab will reuse the VPC, S3 bucket and EC2 launch template from the previous labs.
+This lab will reuse the VPC, S3 bucket, MySQL database and EC2 launch template from the previous labs.
 
 The architecture is illustrated in the following diagram.  
 ![](images/Lab4-Arch.png)
