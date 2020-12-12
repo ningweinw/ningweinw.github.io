@@ -6,4 +6,6 @@ Lab 2: [Build a Virtual Private Cloud (VPC) and Elastic Compute Cloud (EC2) Inst
 
 Lab 3: [Build a Web Application with EC2 and Relational Database Service (RDS) MySQL](Lab3.md)
 
-Lab 4: [Build a Web Application with EC2 Auto Scaling](lab4.md)
+Lab 4: [Build a Web Application with EC2 Auto Scaling](Lab4.md)
+
+Lab 6: [Build a Web Application with Elastic Beanstalk](Lab6.md)
