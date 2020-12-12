@@ -18,7 +18,7 @@ The architecture is illustrated in the following diagram.
   - Click __Next__, select __None__ for scaling policies
   - Click __Next__ all the way, and click __Create Auto Scaling group__
 - Choose the newly created auto scaling group *lab-asp*, edit __Advanced configurations__, change __Default cooldown__ to `60` seconds
-- In __Instance management__, one instance is displayed, get its __Public IPv4 DNS__, verify the web application is working using URL: http://<EC2_DNS_Name>:8080
+- In __Instance management__, one instance is displayed, get its __Public IPv4 DNS__, verify the web application is working using URL: `http://<EC2_DNS_Name>:8080`
 
 ### 2. Manual Scaling
 - Choose __EC2__ service, choose auto scaling group *lab-asp*
