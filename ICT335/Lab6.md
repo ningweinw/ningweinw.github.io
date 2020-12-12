@@ -31,5 +31,17 @@ export MYSQL_PASSWORD=<MYSQL_PASSWORD>
 export MYSQL_HOST=<MYSQL_HOST>
 ```
 
+### 4. Deploy the Web Application
+- Choose __Elastic Beanstalk__, __Create Application__ with the name: `lab-eb`
+- __Platform__: *Python*
+- __Upload your code__: *eb-azurevote.zip* downloaded in task 2
+- __Configure more options__: under __Software__, __Edit__, create the following __Environment properties__
+  - `MYSQL_USER` = `admin`
+	- `MYSQL_PASSWORD` = <MYSQL_PASSWORD>
+	- `MYSQL_HOST` = <MYSQL_HOST>
+- __Create app__
+- The Elastic Beanstalk application and environment will be created. When the environment *LabEb-env* is ready, click __Go to environment__, the web application will display.
+
+
 ## Lab Cleanup
 - Delete the Beanstalk application
