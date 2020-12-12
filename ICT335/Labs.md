@@ -8,4 +8,6 @@ Lab 3: [Build a Web Application with EC2 and Relational Database Service (RDS) M
 
 Lab 4: [Build a Web Application with EC2 Auto Scaling](Lab4.md)
 
+Lab 5: [Build a Load Balanced Web Application with Elastic Load Balancing](Lab5.md)
+
 Lab 6: [Build a Web Application with Elastic Beanstalk](Lab6.md)
