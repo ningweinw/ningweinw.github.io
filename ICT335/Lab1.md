@@ -33,9 +33,9 @@ The architecture is illustrated in the following diagram.
   - Select object *index.html*, try to access the static website using __Object URL__, observe the access error
   - Enable public access
     - Review __Account settings for Block Public Access__
-    - Uncheck __Block all public access__ in bucket's __Permission__ tab
+    - Uncheck __Block all public access__ in bucket's __Permissions__ tab
     - In bucket's __Objects__ tab, select both objects, click __Action__ and select __Make public__
-    - Review the ACL settings in each object's __Details__ tab
+    - Review the ACL settings in each object's __Permissions__ tab
   - Try to access the static website again, the webpage displays successfully
 
 ## Lab Cleanup
