@@ -13,12 +13,12 @@ The architecture is illustrated in the following diagram.
 - Choose __EC2__ service, __Launch template__, select *lab-ubuntu-template*
 - __Actions__, __Launch instance from template__ with the following settings:
   - Number of instances: `2`
-  - Network settings: choose *public-subnet"*
+  - Network settings: choose *public-subnet*
 - Two EC2 instances are created
 - For each instance, verify the web application URL works: `http://<EC2_DNS_Name>:8080`
 
 ### 2. Create Network Load Balancer
-- Choose__Load Balancers__, __Create Load Balancer__, select __Network Load Balancer__
+- Choose __Load Balancers__, __Create Load Balancer__, select __Network Load Balancer__
   - Name: `lab-lb`
   - Scheme: *internet-facing*
   - Listeners: keep the default listener on TCP port 80
