@@ -12,8 +12,8 @@ The architecture is illustrated in the following diagram.
 ### 1. Prepare MySQL to Allow Public Access
 The MySQL database created in lab 3 only allows private access in VPC, we need to reconfigure it to allow public access from free tier Beanstalk application.
 - Choose __RDS__, select *database-1*, __Modify__
-  - In __Connectivity__, select __Additional configuration__. Enable __Publicly accessible__, __Continue__, and complete the modification
-- Choose __VPC__, in __Route Tables__, choose the main subnet (with __Main__ column showing *Yes*) of *lab-vpc*
+  - In __Connectivity__, select __Additional configuration__. Enable __Publicly accessible__, __Continue__, and complete the modification (Choose __Apply immediately__)
+- Choose __VPC__, in __Route Tables__, choose the main route table (with __Main__ column showing *Yes*) for *lab-vpc*
   - __Edit routes__, __Add route__ with the following attributes:
     - Destination: `0.0.0.0/0`
     - Target: *Internet Gateway*, choose the only record
@@ -37,8 +37,8 @@ export MYSQL_HOST=<MYSQL_HOST>
 - __Upload your code__: *eb-azurevote.zip* downloaded in task 2
 - __Configure more options__: under __Software__, __Edit__, create the following __Environment properties__
   - `MYSQL_USER` = `admin`
-	- `MYSQL_PASSWORD` = <MYSQL_PASSWORD>
-	- `MYSQL_HOST` = <MYSQL_HOST>
+  - `MYSQL_PASSWORD` = \<MYSQL_PASSWORD\>
+  - `MYSQL_HOST` = \<MYSQL_HOST\>
 - __Create app__
 - The Elastic Beanstalk application and environment will be created. When the environment *LabEb-env* is ready, click __Go to environment__, the web application will display.
 
