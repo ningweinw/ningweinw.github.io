@@ -19,7 +19,7 @@ The architecture is illustrated in the following diagram.
   - *MySQL*, default version: *8.0.20*
   - *Free tier*
   - DB instance ID: `database-1`
-  - Master username and password: `admin` / <MYSQL_PASSWORD>
+  - Master username and password: `admin` / \<MYSQL_PASSWORD\>
   - Storage
     - Allocated storage: `5` GB
     - Disable __Storage autoscaling__
@@ -33,7 +33,7 @@ The architecture is illustrated in the following diagram.
 - After the database is created, enable incoming MySQL traffic
   - Choose *database-1*, choose the Security group, edit inbound rules, add the following rule:
     - Type: *MYSQL/Aurora*, Source: *Anywhere*
-- Take note of the database endpoint host string, which will be used to replace <MYSQL_HOST> in task 3
+- Take note of the database endpoint host string, which will be used to replace \<MYSQL_HOST\> in task 3
 
 ### 2. Upload Web Application Package to S3
 - Upload [azure-vote.tar](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/azure-vote.tar) to the S3 bucket created in Lab 1. Enable public access, refer to Lab 1
@@ -46,7 +46,7 @@ The architecture is illustrated in the following diagram.
   - Instance type: *t2.micro*
   - Key pair: *labvm-key*
   - Security group: *labvm-sg*
-  - In __Advanced details__, provide the [user data](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/ec2-userdata.txt) (Replace <S3_TAR_URL>, <MYSQL_PASSWORD>, <MYSQL_HOST> with the values from the previous steps)
+  - In __Advanced details__, provide the [user data](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/ec2-userdata.txt) (Replace \<S3_TAR_URL\>, \<MYSQL_PASSWORD\>, \<MYSQL_HOST\> with the values from the previous steps)
 
 ### 4. Create Web Server
 - Choose the launch template. From __Actions__, __Launch instance from template__
