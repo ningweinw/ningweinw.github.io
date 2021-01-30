@@ -6,7 +6,8 @@ In this lab, we will have an overview of the AWS Educate program and create the 
 ## Lab Task Outline
 ### 1. AWS Educate and AWS Account
 - Review [AWS Educate](https://aws.amazon.com/education/awseducate/)
-- Join AWS Educate as Student
+- Join AWS Educate as Student. Upon AWS approval, student can create an AWS Educate Starter Account preloaded with credit, without the need to provide credit card info.
+- While waiting for the approval, the remaining of the lab can be done using a normal AWS account.
 - Review [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all) and [AWS Pricing](https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln)
 - Estimate cost with [AWS Pricing Calculator](https://calculator.aws/#/?nc2=h_ql_pr_calc_smc)
 - [Create an AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&src=header_signup)
