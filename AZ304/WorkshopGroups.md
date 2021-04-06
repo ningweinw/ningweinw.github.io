@@ -7,7 +7,7 @@
 | Mayur Gadhia | M Azizul Hakim Mohamad Nasrun | Mohanraj Chennimalai |
 | Gopi Ramalingam | Renga Raj | Shen Kai Wong |
 | Lee Kian Seng | Dick Leung | Siva B |
-| Kian Leng Geh | Muhamad Radzi Abdul Rahman | |
+| Kian Leng Geh | Muhamad Radzi Abdul Rahman | David Wong |
 
 Workshop 1 document: [Enterprise class networking](https://github.com/ningweinw/ningweinw.github.io/raw/master/AZ304/Student%20guide%20for%20Enterprise%20class%20networking.pdf)
 
