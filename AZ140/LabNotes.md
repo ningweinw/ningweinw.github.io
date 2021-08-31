@@ -11,3 +11,4 @@
         > Import-Module -Name "C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync"
     - If **az140-cl-vm11** does not appear in Azure AD's Devices list after 10 minutes, run the following command in the **Administrator: Windows PowerShell ISE** window on **az140-dc-vm11**
         > Start-ADSyncSyncCycle -PolicyType Initial
+5. In lab **Implement and manage Azure Virtual Desktop profiles (AD DS)**, remove session host **az140-21-p1-2** from host pool **az140-21-hp1**
