@@ -6,3 +6,5 @@
 3. At the end of lab **Deploy and manage host pools and hosts by using PowerShell**, delete resources with the following steps:
     - In Azure portal, select **Azure Virtual Desktop** service, select **Host pools** blade, select **az140-24-hp3**, select **Session hosts** blade, select all hosts and click **Remove**
     - Delete resource group **az140-24-RG**
+4. In lab **Configure Conditional Access policies for WVD (AD DS)**, if the **Start-ADSyncSyncCycle** command throws *...not recognized...* error, run the following command first:
+    > Import-Module -Name "C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync"
