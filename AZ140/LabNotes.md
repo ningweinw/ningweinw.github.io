@@ -14,3 +14,5 @@
 5. In lab **Implement and manage Azure Virtual Desktop profiles (AD DS)**, some steps miss out the configuration on host **az140-21-p1-2**. To have the correct lab observation:
     - Stop VM **az140-21-p1-2** before executing **Task 2: Test FSLogix-based profiles with Azure Virtual Desktop**
     - Start VM **az140-21-p1-2** if necessary, for the remaining labs
+6. In lab **Package Azure Virtual Desktop applications (AD DS)**
+    - Exercise 3, Task 2, Step 9 & 10, add role assignments on _**Storage account's**_ Access Control (IAM) blade, instead of on File share
