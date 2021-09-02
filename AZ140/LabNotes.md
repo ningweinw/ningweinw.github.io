@@ -7,8 +7,6 @@
     - In Azure portal, select **Azure Virtual Desktop** service, select **Host pools** blade, select **az140-24-hp3**, select **Session hosts** blade, select all hosts and click **Remove**
     - Delete resource group **az140-24-RG**
 4. In lab **Configure Conditional Access policies for WVD (AD DS)**
-    - If the **Start-ADSyncSyncCycle** command throws *"...not recognized..."* error, run the following command first:
-        > Import-Module -Name "C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync"
     - If **az140-cl-vm11** does not appear in Azure AD's Devices list after 10 minutes, run the following command in the **Administrator: Windows PowerShell ISE** window on **az140-dc-vm11**
         > Start-ADSyncSyncCycle -PolicyType Initial
 5. In lab **Implement and manage Azure Virtual Desktop profiles (AD DS)**, some steps miss out the configuration on host **az140-21-p1-2**. To have the correct lab observation:
