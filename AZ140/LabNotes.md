@@ -3,6 +3,3 @@
 2. In lab **Configure Conditional Access policies for WVD (AD DS)**
     - If **az140-cl-vm11** does not appear in Azure AD's Devices list after 10 minutes, run the following command in the **Administrator: Windows PowerShell ISE** window on **az140-dc-vm11**
         > Start-ADSyncSyncCycle -PolicyType Initial
-3. In lab **Implement and manage Azure Virtual Desktop profiles (AD DS)**, some steps miss out the configuration on host **az140-21-p1-2**. To have the correct lab observation:
-    - Stop VM **az140-21-p1-2** before executing **Task 2: Test FSLogix-based profiles with Azure Virtual Desktop**
-    - Start VM **az140-21-p1-2** if necessary, for the remaining labs
