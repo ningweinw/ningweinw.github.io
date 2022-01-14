@@ -1,28 +1,18 @@
-# ICT335 Virtual Lab 1: AWS & AWS Educate Overview, Build a Static Website with Simple Storage Service (S3)
+# ICT335 Virtual Lab 1: AWS Academy Overview, Build a Static Website with Simple Storage Service (S3)
 
 ## Lab Overview
-In this lab, we will have an overview of the AWS Educate program and create the request to join as a student. We will create an AWS account and get familiar with the AWS Management Console. We will then create a static website using the Simple Storage Service (S3).
+In this lab, we will first have an overview of the AWS Academy, and then create a static website using the Simple Storage Service (S3).
 
 ## Lab Task Outline
-### 1. AWS Educate and AWS Account
-- Review [AWS Educate](https://aws.amazon.com/education/awseducate/)
-- Join AWS Educate as Student. Upon AWS approval, student can create an AWS Educate Starter Account preloaded with credit, without the need to provide credit card info.
-- While waiting for the approval, the remaining of the lab can be done using a normal AWS account.
-- Review [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all) and [AWS Pricing](https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln)
-- Estimate cost with [AWS Pricing Calculator](https://calculator.aws/#/?nc2=h_ql_pr_calc_smc)
-- [Create an AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&src=header_signup)
-- Configure the account
-  - Review __My Account__ settings
-    - Set __Account Name__
-    - Activate __IAM User and Role Access to Billing Information__
-  - Review __My Security Credentials__
-    - Enable __Multi-factor authentication (MFA)__
-  - Review __My Billing Dashboard__ and the setting to __Receive AWS Free Tier Usage Alerts__ under __Billing preferences__
-- Choose __IAM__ service, __Add user__
-  - Select __AWS Management Console access__
-  - Set permission by selecting existing policy: __AdministratorAccess__ 
-- Select the newly created user, enable MFA under __Security credentials__
-- Sign out and sign in using the newly created IAM user account
+### 1. AWS Academy
+- Sign in on [AWS Academy](https://www.awsacademy.com/LMS_Login)
+- Locate and choose course: __AWS Academy Learner Lab - Foundation Services [13164]__
+- Browse the modules, read the Student Guide on how to use the lab environment
+- Click module __Learner Lab - Foundational Services__, get familiar with the layout
+- Click __Start Lab__
+- After the lab is started, click __AWS__ to access the AWS console
+
+![image](https://user-images.githubusercontent.com/43491290/149454038-2dc880e8-d469-44c9-8800-abd8a34414e1.png)
 
 ### 2. Build a Static Website with Simple Storage Service (S3)
 The architecture is illustrated in the following diagram.  
