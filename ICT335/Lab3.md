@@ -12,11 +12,11 @@ The architecture is illustrated in the following diagram.
 ### 1. Create RDS MySQL Database
 - Choose __RDS__ service, __Create DB Subnet Group__ with name `lab-vpc-subnet-group`. Provide a description.
   - VPC: *lab-vpc*
-  - Availability zones: *ap-southeast-1b*, *ap-southeast-1c*
-  - Subnets: *private-subnet-1* and *private-subnet-2*
+  - Availability zones: *us-east-1b*, *us-east-1c*
+  - Subnets: the two private subnets created in the previous lab
 - __Create database__, with the following attributes:
   - *Standard create*
-  - *MySQL*, default version: *8.0.20*
+  - *MySQL*, default version: *8.0.23*
   - *Free tier*
   - DB instance ID: `database-1`
   - Master username and password: `admin` / \<MYSQL_PASSWORD\>
@@ -32,11 +32,12 @@ The architecture is illustrated in the following diagram.
   - Additional configuration: disable backup
 - After the database is created, enable incoming MySQL traffic
   - Choose *database-1*, choose the Security group, edit inbound rules, add the following rule:
-    - Type: *MYSQL/Aurora*, Source: *Anywhere*
+    - Type: *MYSQL/Aurora*, Source: *Anywhere-IPv4*
 - Take note of the database endpoint host string, which will be used to replace \<MYSQL_HOST\> in task 3
 
 ### 2. Upload Web Application Package to S3
-- Upload [azure-vote.tar](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/azure-vote.tar) to the S3 bucket created in Lab 1. Enable public access, refer to Lab 1
+- Upload [azure-vote.tar](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/azure-vote.tar) to the S3 bucket created in Lab 1.
+  - Provide the following tag: key=*public*, value=*yes*
 - Take note of the URL, which will be used to replace <S3_TAR_URL> in task 3
 
 ### 3. Create EC2 Launch template for Web Server
@@ -57,3 +58,4 @@ The architecture is illustrated in the following diagram.
 ## Lab Cleanup
 - Terminate the EC2 instance
 - Keep the database, EC2 launch template and S3 object for the next lab
+- Stop the database
