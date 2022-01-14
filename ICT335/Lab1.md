@@ -18,15 +18,32 @@ In this lab, we will first have an overview of the AWS Academy, and then create 
 The architecture is illustrated in the following diagram.  
 ![](images/Lab1-Arch.png)
   - Choose __S3__ service, __Create bucket__
+    - Uncheck __Block all public access__
+    - Check the acknowledgement
   - Select the newly created bucket, enable __Static website hosting__ in __Properties__ tab
     - Enter `index.html` for __Index document__ and `error.html` for __Error document__
   - Download the [zip file](http://tinyurl.com/s3static) containing the static website files, unzip, and __Upload__ the two files to the bucket
+    - Under __Properties__ -> __Tags__, add the following tag: key=*public*, value=*yes*
   - Select object *index.html*, try to access the static website using __Object URL__, observe the access error
-  - Enable public access
-    - Review __Account settings for Block Public Access__
-    - Uncheck __Block all public access__ in bucket's __Permissions__ tab
-    - In bucket's __Objects__ tab, select both objects, click __Action__ and select __Make public__
-    - Review the ACL settings in each object's __Permissions__ tab
+  - Enable public access. In bucket's __Permissions__ tab -> __Bucket policy__, click __Edit__, enter the following policy, replace *<Bucket_Name>* with the name of the newly created S3 bucket, __Save changes__.
+  ```
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": "*",
+        "Action": "s3:GetObject",
+        "Resource": "arn:aws:s3:::<Bucket_Name>/*",
+        "Condition": {
+          "StringEquals": {
+            "s3:ExistingObjectTag/public": "yes"
+          }
+        }
+      }
+    ]
+  } 
+  ```
   - Try to access the static website again, the webpage displays successfully
 
 ## Lab Cleanup
