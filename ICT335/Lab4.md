@@ -9,7 +9,10 @@ The architecture is illustrated in the following diagram.
 ![](images/Lab4-Arch.png)
 
 ## Lab Task Outline
-### 1. Create EC2 Auto Scaling Group
+### 1. Preparation
+- Start the database created in the previous lab
+
+### 2. Create EC2 Auto Scaling Group
 - Choose __EC2__ service, __Auto Scaling Groups__, __Create an Auto Scaling Group__ with name `lab-asp`, and the following setting:
   - Launch template: *lab-ubuntu-template*
   - Click __Next__, select __Adhere to launch template__
@@ -20,7 +23,7 @@ The architecture is illustrated in the following diagram.
 - Choose the newly created auto scaling group *lab-asp*, edit __Advanced configurations__, change __Default cooldown__ to `60` seconds
 - In __Instance management__, one instance is displayed, get its __Public IPv4 DNS__, verify the web application is working using URL: `http://<EC2_DNS_Name>:8080`
 
-### 2. Manual Scaling
+### 3. Manual Scaling
 - Choose __EC2__ service, choose auto scaling group *lab-asp*
 - Edit __Group details__, set the following attributes:
   - Desired capacity: `2`
@@ -30,9 +33,9 @@ The architecture is illustrated in the following diagram.
   - Desired capacity: `1`
 - In __Instance management__, observe an instance is terminated and removed from the auto scaling group
 
-### 3. Auto Scaling
+### 4. Auto Scaling
 - Choose __EC2__ service, choose auto scaling group *lab-asp*
-- In __Automatic scaling__, __Add policy__ with the following setting:
+- In __Automatic scaling__, __Create dynamic scaling policy__ with the following setting:
   - Policy type: __Target tracking scaling__
   - Metric type: *Average CPU utilization*
   - Target value: `50`
@@ -40,7 +43,7 @@ The architecture is illustrated in the following diagram.
 - Simulate CPU load. SSH to the only instance, run the following command from where the downloaded key file *labvm-key.pem* is located
   ```
   ssh -i labvm-key.pem ubuntu@<EC2_DNS_Name>  
-  stress --cpu 1 --timeout 300 &  
+  stress --cpu 1 --timeout 600 &  
   ```
 - Observe the __CPU Utilization graph__ in __Monitoring__, __EC2__ tab
 - After around 5 minutes, a new instance is created, observe the __Activity history__
@@ -49,3 +52,4 @@ The architecture is illustrated in the following diagram.
 
 ## Lab Cleanup
 - Delete the auto scaling group
+- Stop the database
