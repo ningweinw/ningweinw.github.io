@@ -16,7 +16,7 @@ The architecture is illustrated in the following diagram.
 - Choose __EC2__ service, __Auto Scaling Groups__, __Create an Auto Scaling Group__ with name `lab-asp`, and the following setting:
   - Launch template: *lab-ubuntu-template*
   - Click __Next__, select __Adhere to launch template__
-  - VPC: *lab-vpc*, subnet: *public-subnet*
+  - VPC: *lab-vpc*, subnet: *lab-subnet-public1-us-east-1a*
   - Click __Next__, select __No load balancer__, check __Enable group metrics collection within CloudWatch__
   - Click __Next__, select __None__ for scaling policies
   - Click __Next__ all the way, and click __Create Auto Scaling group__
