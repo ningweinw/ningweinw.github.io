@@ -8,19 +8,19 @@ The architecture is illustrated in the following diagram.
 
 ## Lab Task Outline
 ### 1. Build a Virtual Private Cloud (VPC)
-- Choose __VPC__ service, __Launch VPC Wizard__
-  - Select __VPC with a Single Public Subnet__, enter the following attribute values:
-    - VPC name: `lab-vpc`
-    - Availability Zone: `us-east-1a`
-    - Subnet name: `public-subnet`
+- Choose __VPC__ service, __Create VPC__
+  - Select __VPC and more__
+  - Under __Auto-generate__, enter VPN prefix: `lab`
+  - Under __Number of Availability Zones (AZs)__, select `3`
+  - Under __Number of public subnets__, select `3`
+  - Under __Number of private subnets__, select `3`
+  - Under __NAT gateways__, select `None`
+  - Under __VPC endpoints__, select `None`
   - Create VPC
-- In the subnet list, choose *public-subnet*, click __Actions__, and __Edit subnet settings__, check __Enable auto-assign public IPv4 address__, __Save__
-- Create two more subnets for the newly created VPC
-  - Subnet name: `private-subnet-1`, Availability Zone: `us-east-1b`, IPv4 CIDR block: `10.0.1.0/24`
-  - Subnet name: `private-subnet-2`, Availability Zone: `us-east-1c`, IPv4 CIDR block: `10.0.2.0/24`
 - Review the newly created VPC and its configuration
-  - Review the three subnets and their associated route tables
+  - Review the public and private subnets, and their associated route tables
   - Review the routes in the route tables, and the route targets
+- In the subnet list, choose *lab-subnet-public1-us-east-1a*, click __Actions__, and __Edit subnet settings__, check __Enable auto-assign public IPv4 address__, __Save__
 
 ### 2. Create a Windows Server
 - Choose __EC2__ service, __Create security group__, with the name of `labvm-sg`. Provide a description, choose VPC: *lab-vpc*. Add the following inboud rules:
@@ -30,11 +30,10 @@ The architecture is illustrated in the following diagram.
 - Choose __EC2__ service, __Launch instance__
   - Search "windows server 2019", select __Microsoft Windows Server 2019 Base__
   - Select __t2.micro__
-  - Select VPC: *lab-vpc*, subnet: *public-subnet*
+  - __Create new key pair__ with the name of `labvm-key`. Take note of the `labvm-key.pem` file that gets downloaded automatically
+  - Edit __Network settings__, select VPC: *lab-vpc*, subnet: *lab-subnet-public1-us-east-1a*
   - Select the existing security group: *labvm-sg*
-  - __Launch__
-  - When prompted, __Create a new key pair__ with the name of `labvm-key`, __Download Key Pair__
-  - __Launch instances__
+  - __Launch instance__
 - Select the newly created EC2 instance, __Connect__
 - Choose __RDP client__ and select __Get password__. Click __Browse__ and select the key file downloaded in the previous step. __Decrypt Password__ and note down the password
 - __Download remote desktop file__, open it and login when prompted
