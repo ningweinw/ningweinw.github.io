@@ -22,7 +22,13 @@ The architecture is illustrated in the following diagram.
   - Review the routes in the route tables, and the route targets
 - In the subnet list, choose *lab-subnet-public1-us-east-1a*, click __Actions__, and __Edit subnet settings__, check __Enable auto-assign public IPv4 address__, __Save__
 
-### 2. Create a Windows Server
+### 2. Delete unused public subnets
+- Choose __VPC__ service, __Subnets__, sort the table by __VPC__ column
+- Check *lab-subnet-public2-us-east-1b* and *lab-subnet-public3-us-east-1c*
+- Under __Actions__ menu, choose __Delete subnet__
+- Ignore the error message, confirm deletion, click __Delete__
+
+### 3. Create a Windows Server
 - Choose __EC2__ service, __Create security group__, with the name of `labvm-sg`. Provide a description, choose VPC: *lab-vpc*. Add the following inboud rules:
   - Type: __SSH__, Source: __Anywhere-IPv4__
   - Type: __RDP__, Source: __Anywhere-IPv4__
