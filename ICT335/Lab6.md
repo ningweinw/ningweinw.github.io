@@ -13,7 +13,7 @@ The architecture is illustrated in the following diagram.
 The MySQL database created in lab 3 only allows private access in VPC, we need to reconfigure it to allow public access from free tier Beanstalk application.
 - Choose __RDS__, select *database-1*, start it
   - __Modify__, in __Connectivity__, select __Additional configuration__. Enable __Publicly accessible__, __Continue__, and complete the modification (Choose __Continue__, then __Modify DB instance__)
-- Choose __VPC__, in __Route Tables__, choose the main route table (with __Main__ column showing *Yes*) for *lab-vpc*
+- Choose __VPC__, in __Route Tables__, perform the following configuration for both *lab-rtb-private2-us-east-1b* and *lab-rtb-private3-us-east-1c*
   - __Edit routes__, __Add route__ with the following attributes, __Save changes__
     - Destination: `0.0.0.0/0`
     - Target: *Internet Gateway*, choose the only record
