@@ -53,6 +53,7 @@ The architecture is illustrated in the following diagram.
 - Choose the launch template. From __Actions__, __Launch instance from template__
   - In __Network settings__, choose *lab-subnet-public1-us-east-1a*
 - Take note of EC2 instance' __Public IPv4 DNS__
+- Wait for the EC2 instance' status check to display "2/2 checks passed"
 - Open a browser, connect to `http://<EC2_DNS_Name>:8080`
 
 ## Lab Cleanup
