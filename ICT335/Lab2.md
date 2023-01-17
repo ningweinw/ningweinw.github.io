@@ -10,7 +10,7 @@ The architecture is illustrated in the following diagram.
 ### 1. Build a Virtual Private Cloud (VPC)
 - Choose __VPC__ service, __Create VPC__
   - Select __VPC and more__
-  - Under __Auto-generate__, enter VPN prefix: `lab`
+  - Under __Auto-generate__, enter VPC prefix: `lab`
   - Under __Number of Availability Zones (AZs)__, select `3`
   - Under __Number of public subnets__, select `3`
   - Under __Number of private subnets__, select `3`
@@ -34,6 +34,7 @@ The architecture is illustrated in the following diagram.
   - Type: __RDP__, Source: __Anywhere-IPv4__
   - Type: __Custom TCP__, Port range: `8080`, Source: __Anywhere-IPv4__
 - Choose __EC2__ service, __Launch instance__
+  - Provide a name: *lab-vm-win-1*
   - Search "windows server 2019", select __Microsoft Windows Server 2019 Base__
   - Select __t2.micro__
   - __Create new key pair__ with the name of `labvm-key`. Take note of the `labvm-key.pem` file that gets downloaded automatically
