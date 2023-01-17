@@ -18,6 +18,7 @@ In this lab, we will first have an overview of the AWS Academy, and then create 
 The architecture is illustrated in the following diagram.  
 ![](images/Lab1-Arch.png)
   - Choose __S3__ service, __Create bucket__
+    - Keep the default *us-east-1* region
     - Uncheck __Block all public access__
     - Check the acknowledgement
   - Select the newly created bucket, enable __Static website hosting__ in __Properties__ tab
