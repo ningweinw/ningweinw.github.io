@@ -5,10 +5,10 @@ In this lab, we will first have an overview of the AWS Academy, and then create 
 
 ## Lab Task Outline
 ### 1. AWS Academy
-- Sign in on [AWS Academy](https://www.awsacademy.com/LMS_Login)
-- Locate and choose course: __AWS Academy Learner Lab - Foundation Services [13164]__
+- Sign in on [AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)
+- Locate and choose course: __AWS Academy Learner Lab [37197]__
 - Browse the modules, read the Student Guide on how to use the lab environment
-- Click module __Learner Lab - Foundational Services__, get familiar with the layout
+- Click module __Learner Lab__, get familiar with the layout
 - Click __Start Lab__
 - After the lab is started, click __AWS__ to access the AWS console
 
