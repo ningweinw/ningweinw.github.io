@@ -86,7 +86,7 @@ On the Traffic Simulation server, run the following command:
 ab -c 1 -n 1000000 <Environment URL from Step 5>
 ```
 
-### 8. Simulate Web Traffic
+### 8. Observe Auto Scaling
 - Wait for 5 minutes, choose environment *Labeb-env*, __Health__, observe the number of EC2 instances
 - Choose __Event__, observe the event records
 - Choose __Monitoring__, observe the metrics
