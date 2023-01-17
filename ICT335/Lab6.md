@@ -66,10 +66,32 @@ export MYSQL_HOST=<MYSQL_HOST>
     - For IAM instance profile, choose *LabInstanceProfile*
     - __Save__
 - __Create app__
-- The Elastic Beanstalk application and environment will be created. When the environment *LabEb-env* is ready, click __Go to environment__, the web application will display.
+- The Elastic Beanstalk application and environment will be created. When the environment *Labeb-env* is ready, click __Go to environment__, the web application will display.
+- Right-click __Go to environment__, select __Copy link__, paste the value in a notepad or text file
+- Observe the resources that have been created automatically including the EC2, Security Group, Load Balancer, Target Group
 
-### 6. Update the Auto Scaling Setting
+### 6. Update the Auto Scaling Settings
+- Choose environment *Labeb-env*, __Configuration__, click __Edit__ in the __Capacity__ section. Update the following settings to reduce the waiting time for auto scaling
+  - Max Instances: `3`
+  - Scaling cooldown: `60` seconds
+  - Period: `1` Min
+  - Breach duration: `1` Min
+  - Upper threshold: `5000` Bytes
+  - Lower threshold: `1000` Bytes
+- __Apply__
+
+### 7. Simulate Web Traffic
+On the Traffic Simulation server, run the following command:
+```
+ab -c 1 -n 1000000 <Environment URL from Step 5>
+```
+
+### 8. Simulate Web Traffic
+- Wait for 5 minutes, choose environment *Labeb-env*, __Health__, observe the number of EC2 instances
+- Choose __Event__, observe the event records
+- Choose __Monitoring__, observe the metrics
 
 ## Lab Cleanup
+- Delete the traffic simulation EC2 instance
 - Delete the Beanstalk application
 - Delete the database
