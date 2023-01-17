@@ -16,7 +16,7 @@ The architecture is illustrated in the following diagram.
   - Subnets: the two private subnets created in the previous lab
 - __Create database__, with the following attributes:
   - *Standard create*
-  - *MySQL*, default version: *8.0.23*
+  - *MySQL*, keep the default version
   - *Free tier*
   - DB instance ID: `database-1`
   - Master username and password: `admin` / \<MYSQL_PASSWORD\>
@@ -37,7 +37,7 @@ The architecture is illustrated in the following diagram.
 
 ### 2. Upload Web Application Package to S3
 - Upload [azure-vote.tar](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/azure-vote.tar) to the S3 bucket created in Lab 1.
-  - Provide the following tag: key=*public*, value=*yes*
+  - __Important__: Provide the following tag: key=*public*, value=*yes*
 - Take note of the URL, which will be used to replace <S3_TAR_URL> in task 3
 
 ### 3. Create EC2 Launch template for Web Server
