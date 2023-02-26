@@ -39,7 +39,7 @@ The architecture is illustrated in the following diagram.
 - Back to the load balancer *lab-lb*, find the DNS, visit the URL `http://<LB_DNS>` and the web application homepage is displayed
 - Refresh the URL a few times, observe the host name display changes between the two EC2 instances
 
-### 4. Add One More Instance to Load Balancer
+### 4. Add One More Web Server to Load Balancer
 - Create a new EC2 instance using the launch template *lab-ubuntu-template*. Refer to step #2
 - Wait for the new EC2 instance to complete initialization, verify the web application URL on this instance
 - Choose the target group *lab-lb-tg*
@@ -49,7 +49,7 @@ The architecture is illustrated in the following diagram.
 - Wait for the __Health status__ of the newly added EC2 instance turns to *healthy*
 - Visit the URL `http://<LB_DNS>`, refresh the URL a few times, observe the host name display changes between the three EC2 instances
 
-### 5. Change Instance State
+### 5. Change Web Server State
 - Stop one EC2 instance
   - In target group *lab-lb-tg*, observe the target __Health status__. Notice the delay before the staus of the stopped instance changes to *unhealthy*
   - Refresh the load balancer URL, observe the result
