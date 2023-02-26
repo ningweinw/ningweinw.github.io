@@ -19,9 +19,36 @@ cd /app
 wget <S3_TAR_URL> -O azure-vote.tar
 tar xvf azure-vote.tar
 
-# start
+# create startup script
+cat > /app/azure-vote/start.sh << EOF
+#!/bin/sh
+
 export MYSQL_USER="admin"
 export MYSQL_PASSWORD="<MYSQL_PASSWORD>"
 export MYSQL_HOST="<MYSQL_HOST>"
 cd /app/azure-vote
 python3 main.py &
+EOF
+
+chmod +x /app/azure-vote/start.sh
+
+# enable auto start
+cat > /etc/systemd/system/azure-vote.service << EOF
+[Unit]
+Description=azure-vote
+
+[Service]
+ExecStart=/app/azure-vote/start.sh
+KillMode=control-group
+Restart=no
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+chmod 664 /etc/systemd/system/azure-vote.service
+systemctl daemon-reload
+systemctl enable azure-vote
+systemctl start azure-vote
