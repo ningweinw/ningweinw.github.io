@@ -24,7 +24,7 @@ The architecture is illustrated in the following diagram.
 - Choose __Load Balancers__, __Create Load Balancer__, select __Network Load Balancer__
   - Name: `lab-lb`
   - Scheme: *internet-facing*
-  - Network mapping: select *lab-vpc* and *us-east-1a*, the *lab-subnet-public1-us-east-1a* will be selected automatically
+  - Network mapping: select *lab-vpc* and *us-east-1a*, *lab-subnet-public1-us-east-1a*
   - Listeners: keep the default listener on TCP port 80
   - Click __Create target group__
     - New target group: `lab-lb-tg`
