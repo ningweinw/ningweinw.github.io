@@ -43,7 +43,7 @@ The architecture is illustrated in the following diagram.
 ### 3. Create EC2 Launch template for Web Server
 - Choose __EC2__ service, __Create launch template__ with name `lab-ubuntu-template`. Select the following attributes:
   - Enable __Auto Scaling guidance__
-  - Image: *Ubuntu Server 18.04 LTS*
+  - Image: *Ubuntu Server 22.04 LTS*
   - Instance type: *t2.micro*
   - Key pair: *labvm-key*
   - Security group: *labvm-sg*
