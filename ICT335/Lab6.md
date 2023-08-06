@@ -30,7 +30,7 @@ The MySQL database created in lab 3 only allows private access in VPC, we need t
 ```
 ssh -i "labvm-key.pem" <EC2 Public IP or DNS>
 ```
-- On the EC2 instance, run following commands:
+- On the EC2 instance, run following commands (If a prompt is shown to restart services, use Tab key to choose Cancel and press Enter):
 ```
 sudo apt-get update
 sudo apt-get install apache2-utils
