@@ -29,7 +29,9 @@ The architecture is illustrated in the following diagram.
   - Click __Create target group__
     - New target group: `lab-lb-tg`
     - Port: `8080`
-    - Advanced health check settings: change interval to *10 seconds*
+    - Advanced health check settings
+      - Change healthy threshold to *2*
+      - Change interval to *10 seconds*
     - __Next: Register Targets__. Choose both instances, __Include as pending below__
     - __Create target group__
   - Back in the load balancer creation wizard, click the refresh button next to the target group list, select the newly created target group
