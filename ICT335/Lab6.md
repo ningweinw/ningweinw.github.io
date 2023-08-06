@@ -53,19 +53,19 @@ export MYSQL_HOST=<MYSQL_HOST>
 ### 5. Deploy the Web Application
 - Choose __Elastic Beanstalk__, __Create Application__ with the name: `lab-eb`
 - __Platform__: *Python*
-- __Upload your code__: *eb-azurevote.zip* downloaded in task 2
-- __Configure more options__
-  - Under __Presets__, select *High availability*
-  - In the __Software__ panel, __Edit__, create the following __Environment properties__, and __Save__
+- __Upload your code__: select *Local file* and upload the *eb-azurevote.zip* downloaded in task 2
+- __Version label__: *v1*
+- __Presets__: select *High availability*
+- Click __Next__, in the step __Configure service access__
+  - For Existing service role, choose *LabRole*
+  - If the environment is in the us-east-1 AWS Region, for EC2 key pair, choose *vockey*
+  - For IAM instance profile, choose *LabInstanceProfile*
+- Click __Next__ three times, in the step __Configure updates, monitoring, and logging__
+  - In the __Platform software__ section, under __Environment properties__, add the following items
     - `MYSQL_USER` = `admin`
     - `MYSQL_PASSWORD` = \<MYSQL_PASSWORD\>
     - `MYSQL_HOST` = \<MYSQL_HOST\>
-  - In the __Security__ panel, __Edit__
-    - For Service role, choose *LabRole*
-    - If the environment is in the us-east-1 AWS Region, for EC2 key pair, choose *vockey*
-    - For IAM instance profile, choose *LabInstanceProfile*
-    - __Save__
-- __Create app__
+- Click __Next__, review all the configuration and __Submit__
 - The Elastic Beanstalk application and environment will be created. When the environment *Labeb-env* is ready, click __Go to environment__, the web application will display.
 - Right-click __Go to environment__, select __Copy link__, paste the value in a notepad or text file
 - Observe the resources that have been created automatically including the EC2, Security Group, Load Balancer, Target Group
