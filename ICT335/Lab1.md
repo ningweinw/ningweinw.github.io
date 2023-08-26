@@ -24,7 +24,7 @@ The architecture is illustrated in the following diagram.
     - Check the acknowledgement
   - Select the newly created bucket, enable __Static website hosting__ in __Properties__ tab
     - Enter `index.html` for __Index document__ and `error.html` for __Error document__
-  - Download the [zip file](http://tinyurl.com/s3static) containing the static website files, unzip, and __Upload__ the two files to the bucket
+  - Download the [zip file](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/AWSEducateS3.zip) containing the static website files, unzip, and __Upload__ the two files to the bucket
     - Under __Properties__ -> __Tags__, add the following tag: key=*public*, value=*yes*
   - Select object *index.html*, try to access the static website using __Object URL__, observe the access error
   - Enable public access. In bucket's __Permissions__ tab -> __Bucket policy__, click __Edit__, enter the following policy, replace *<Bucket_Name>* with the name of the newly created S3 bucket, __Save changes__.
