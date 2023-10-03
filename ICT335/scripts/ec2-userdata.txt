@@ -9,9 +9,8 @@ apt install -y stress
 
 # packages for python web app
 apt install -y python3-pip
-apt install -y libmysqlclient-dev
-pip3 install flask
-pip3 install flask-mysql
+pip3 install flask==2.3.3
+pip3 install flask-mysql==1.4.0
 
 # set up server files
 mkdir /app
