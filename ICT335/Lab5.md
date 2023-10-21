@@ -25,6 +25,7 @@ The architecture is illustrated in the following diagram.
   - Name: `lab-lb`
   - Scheme: *internet-facing*
   - Network mapping: select *lab-vpc* and *us-east-1a*, *lab-subnet-public1-us-east-1a*
+  - Security group: select *labvm-sg*
   - Listeners: keep the default listener on TCP port 80
   - Click __Create target group__
     - New target group: `lab-lb-tg`
