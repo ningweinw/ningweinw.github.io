@@ -32,6 +32,7 @@ The architecture is illustrated in the following diagram.
 - Choose __EC2__ service, __Create security group__, with the name of `labvm-sg`. Provide a description, choose VPC: *lab-vpc*. Add the following inboud rules:
   - Type: __SSH__, Source: __Anywhere-IPv4__
   - Type: __RDP__, Source: __Anywhere-IPv4__
+  - Type: __HTTP__, Source: __Anywhere-IPv4__
   - Type: __Custom TCP__, Port range: `8080`, Source: __Anywhere-IPv4__
 - Choose __EC2__ service, __Launch instance__
   - Provide a name: *lab-vm-win-1*
