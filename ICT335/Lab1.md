@@ -7,7 +7,7 @@ In this lab, we will first have an overview of the AWS Academy, and then create 
 ## Lab Task Outline
 ### 1. AWS Academy
 - Sign in on [AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)
-- Locate and choose course: __AWS Academy Learner Lab [53194]__
+- Locate and choose course: __AWS Academy Learner Lab [<ID>]__
 - Browse the modules, read the Student Guide on how to use the lab environment
 - Click module __Learner Lab__, get familiar with the layout
 - Click __Start Lab__
