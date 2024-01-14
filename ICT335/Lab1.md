@@ -7,9 +7,9 @@ In this lab, we will first have an overview of the AWS Academy, and then create 
 ## Lab Task Outline
 ### 1. AWS Academy
 - Sign in on [AWS Academy](https://www.awsacademy.com/vforcesite/LMS_Login)
-- Locate and choose course: __AWS Academy Learner Lab__
+- Locate and choose course: __AWS Academy Learner Lab \[ID\]__
 - Browse the modules, read the Student Guide on how to use the lab environment
-- Click module __Learner Lab__, get familiar with the layout
+- Click module __Launch AWS Academy Learner Lab__, get familiar with the layout
 - Click __Start Lab__
 - After the lab is started, click __AWS__ to access the AWS console
 
@@ -27,7 +27,7 @@ The architecture is illustrated in the following diagram.
   - Download the [zip file](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/AWSEducateS3.zip) containing the static website files, unzip, and __Upload__ the two files to the bucket
     - Under __Properties__ -> __Tags__, add the following tag: key=*public*, value=*yes*
   - Select object *index.html*, try to access the static website using __Object URL__, observe the access error
-  - Enable public access. In bucket's __Permissions__ tab -> __Bucket policy__, click __Edit__, enter the following policy, replace *<Bucket_Name>* with the name of the newly created S3 bucket, __Save changes__.
+  - Enable public access. In bucket's __Permissions__ tab -> __Bucket policy__, click __Edit__, enter the following policy, replace *\<Bucket_Name\>* with the name of the newly created S3 bucket, __Save changes__.
   ```
   {
     "Version": "2012-10-17",
