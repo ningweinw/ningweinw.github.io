@@ -59,7 +59,7 @@ export MYSQL_HOST=<MYSQL_HOST>
 - Click __Next__, in the step __Configure service access__
   - For Existing service role, choose *LabRole*
   - If the environment is in the us-east-1 AWS Region, for EC2 key pair, choose *vockey*
-  - For IAM instance profile, choose *LabInstanceProfile*
+  - For EC2 instance profile, choose *LabInstanceProfile*
 - Click __Next__ three times, in the step __Configure updates, monitoring, and logging__
   - In the __Platform software__ section, under __Environment properties__, add the following items
     - `MYSQL_USER` = `admin`
