@@ -28,7 +28,7 @@ The MySQL database created in lab 3 only allows private access in VPC, we need t
 - On laptop, launch the command prompt, change the directory to where `labvm-key.pem` is stored
 - Run the following command to connect to the EC2 instance:
 ```
-ssh -i "labvm-key.pem" <EC2 Public IP or DNS>
+ssh -i "labvm-key.pem" ubuntu@<EC2 Public IP or DNS>
 ```
 - On the EC2 instance, run following commands (If a prompt is shown to restart services, use Tab key to choose Cancel and press Enter):
 ```
@@ -66,12 +66,12 @@ export MYSQL_HOST=<MYSQL_HOST>
     - `MYSQL_PASSWORD` = \<MYSQL_PASSWORD\>
     - `MYSQL_HOST` = \<MYSQL_HOST\>
 - Click __Next__, review all the configuration and __Submit__
-- The Elastic Beanstalk application and environment will be created. When the environment *Labeb-env* is ready, click __Go to environment__, the web application will display.
-- Right-click __Go to environment__, select __Copy link__, paste the value in a notepad or text file
+- The Elastic Beanstalk application and environment will be created. When the environment *Lab-eb-env* is ready, click the link under __Domain__, the web application will display.
+- Right-click __Domain__, select __Copy link__, paste the value in a notepad or text file
 - Observe the resources that have been created automatically including the EC2, Security Group, Load Balancer, Target Group
 
 ### 6. Update the Auto Scaling Settings
-- Choose environment *Labeb-env*, __Configuration__, click __Edit__ in the __Instance traffic and scaling__ section. Update the following settings, under Scaling triggers, to reduce the waiting time for auto scaling
+- Choose environment *Lab-eb-env*, __Configuration__, click __Edit__ in the __Instance traffic and scaling__ section. Update the following settings, under Scaling triggers, to reduce the waiting time for auto scaling
   - Period: `1` Min
   - Breach duration: `1` Min
   - Upper threshold: `5000` Bytes
