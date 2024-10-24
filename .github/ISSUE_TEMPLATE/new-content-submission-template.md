@@ -1,6 +1,6 @@
 ---
 name: New content submission template
-about: Describe this issue template's purpose here.
+about: Propose new content
 title: ''
 labels: ''
 assignees: ''
