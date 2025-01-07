@@ -16,15 +16,15 @@ The architecture is illustrated in the following diagram.
 - Choose __EC2__ service, __Auto Scaling Groups__, __Create an Auto Scaling Group__ with name `lab-asp`, and the following setting:
   - Launch template: *lab-ubuntu-template*
   - Click __Next__, select VPC: *lab-vpc*, subnet: *lab-subnet-public1-us-east-1a*
-  - Click __Next__, select __No load balancer__, check __Enable group metrics collection within CloudWatch__
-  - Click __Next__, select __None__ for scaling policies
+  - Click __Next__, select __No load balancer__
+  - Click __Next__, select __No scaling policies__, check __Enable group metrics collection within CloudWatch__
   - Click __Next__ all the way, and click __Create Auto Scaling group__
 - Choose the newly created auto scaling group *lab-asp*
 - In __Instance management__, one instance is displayed, get its __Public IPv4 DNS__, verify the web application is working using URL: `http://<EC2_DNS_Name>:8080`
 
 ### 3. Manual Scaling
 - Choose __EC2__ service, choose auto scaling group *lab-asp*
-- Edit __Group details__, set the following attributes:
+- Edit __lab-asp Capacity overview__, set the following attributes:
   - Desired capacity: `2`
   - Maximum capacity: `2`
 - In __Instance management__, observe a new instance is created, verify the web application is working
