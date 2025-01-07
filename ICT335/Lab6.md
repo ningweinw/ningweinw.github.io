@@ -81,7 +81,7 @@ export MYSQL_HOST=<MYSQL_HOST>
 ### 7. Simulate Web Traffic
 On the Traffic Simulation server, run the following command:
 ```
-ab -c 1 -n 1000000 <Environment URL from Step 5>
+ab -c 2 -n 1000000 <Environment URL from Step 5>
 ```
 
 ### 8. Observe Auto Scaling
