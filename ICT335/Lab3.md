@@ -17,7 +17,7 @@ The architecture is illustrated in the following diagram.
 - __Create database__, with the following attributes:
   - *Standard create*
   - *MySQL*, keep the default version
-  - *Free tier*
+  - Templates: *Sandbox*
   - DB instance ID: `database-1`
   - Master username and password: `admin` / \<MYSQL_PASSWORD\>
   - Storage
@@ -29,7 +29,7 @@ The architecture is illustrated in the following diagram.
     - Public access: *No*
     - VPC security group: *default*
   - Password authentication
-  - Additional configuration: disable backup
+  - Additional configuration: disable backup, disable encryption
 - After the database is created, enable incoming MySQL traffic
   - Choose *database-1*, choose the Security group, edit inbound rules, add the following rule:
     - Type: *MYSQL/Aurora*, Source: *Anywhere-IPv4*
@@ -44,7 +44,7 @@ The architecture is illustrated in the following diagram.
 - Choose __EC2__ service, __Create launch template__ with name `lab-ubuntu-template`. Select the following attributes:
   - Enable __Auto Scaling guidance__
   - Image: *Ubuntu Server 22.04 LTS*
-  - Instance type: *t2.micro*
+  - Instance type: *t3.micro*
   - Key pair: *labvm-key*
   - Security group: *labvm-sg*
   - In __Advanced details__, provide the [user data](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/ec2-userdata.txt) (Replace \<S3_TAR_URL\>, \<MYSQL_PASSWORD\>, \<MYSQL_HOST\> with the values from the previous steps)
