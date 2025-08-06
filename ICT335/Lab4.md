@@ -42,7 +42,7 @@ The architecture is illustrated in the following diagram.
 - Simulate CPU load. SSH to the only instance, run the following command from where the downloaded key file *labvm-key.pem* is located
   ```
   ssh -i labvm-key.pem ubuntu@<EC2_DNS_Name>  
-  stress --cpu 1 --timeout 600 &  
+  stress --cpu 2 --timeout 600 &  
   ```
 - Observe the __CPU Utilization graph__ in __Monitoring__, __EC2__ tab
 - After around 5 minutes, a new instance is created, observe the __Activity history__
