@@ -57,7 +57,7 @@ export MYSQL_HOST=<MYSQL_HOST>
 - __Version label__: *v1*
 - __Presets__: select *High availability*
 - Click __Next__, in the step __Configure service access__
-  - For Existing service role, choose *LabRole*
+  - For Service role, choose *LabRole*
   - If the environment is in the us-east-1 AWS Region, for EC2 key pair, choose *vockey*
   - For EC2 instance profile, choose *LabInstanceProfile*
 - Click __Next__ three times, in the step __Configure updates, monitoring, and logging__
@@ -65,7 +65,7 @@ export MYSQL_HOST=<MYSQL_HOST>
     - `MYSQL_USER` = `admin`
     - `MYSQL_PASSWORD` = \<MYSQL_PASSWORD\>
     - `MYSQL_HOST` = \<MYSQL_HOST\>
-- Click __Next__, review all the configuration and __Submit__
+- Click __Next__, review all the configuration and __Create__
 - The Elastic Beanstalk application and environment will be created. When the environment *Lab-eb-env* is ready, click the link under __Domain__, the web application will display.
 - Right-click __Domain__, select __Copy link__, paste the value in a notepad or text file
 - Observe the resources that have been created automatically including the EC2, Security Group, Load Balancer, Target Group
