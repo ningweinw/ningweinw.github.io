@@ -36,8 +36,8 @@ The architecture is illustrated in the following diagram.
   - Type: __Custom TCP__, Port range: `8080`, Source: __Anywhere-IPv4__, __Anywhere-IPv6__
 - Choose __EC2__ service, __Launch instance__
   - Provide a name: *lab-vm-win-1*
-  - Search "windows server 2019", select __Microsoft Windows Server 2019 Base__
-  - Select __t2.micro__
+  - Search "windows server 2025", select __Microsoft Windows Server 2025 Base__
+  - Select __t3.micro__
   - __Create new key pair__ with the name of `labvm-key`. Take note of the `labvm-key.pem` file that gets downloaded automatically. __Important:__ Keep this file for future labs
   - Edit __Network settings__, select VPC: *lab-vpc*, subnet: *lab-subnet-public1-us-east-1a*
   - Select the existing security group: *labvm-sg*
