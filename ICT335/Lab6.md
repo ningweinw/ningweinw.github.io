@@ -40,27 +40,17 @@ ab -h
 ### 3. Build the Web Application Package
 - The web application package [eb-azurevote.zip](https://github.com/ningweinw/ningweinw.github.io/raw/master/ICT335/scripts/eb-azurevote.zip) for Elastic Beanstalk has been provided
 
-### 4. [Optional] Test Web Application Locally
-Reference [Deploying a flask application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html), set up the Python development environment and run the application locally.
-
-Before running the application, set the required environment variables:
-```
-export MYSQL_USER=admin
-export MYSQL_PASSWORD=<MYSQL_PASSWORD>
-export MYSQL_HOST=<MYSQL_HOST>
-```
-
-### 5. Deploy the Web Application
+### 4. Deploy the Web Application
 - Choose __Elastic Beanstalk__, __Create Application__ with the name: `lab-eb`
 - __Platform__: *Python*
 - __Upload your code__: select *Local file* and upload the *eb-azurevote.zip* downloaded in task 2
 - __Version label__: *v1*
 - __Presets__: select *High availability*
-- Click __Next__, in the step __Configure service access__
+- Click __Next__. In step __Configure service access__
   - For Service role, choose *LabRole*
   - If the environment is in the us-east-1 AWS Region, for EC2 key pair, choose *vockey*
   - For EC2 instance profile, choose *LabInstanceProfile*
-- Click __Next__ three times, in the step __Configure updates, monitoring, and logging__
+- Click __Next__ twice. In step __Configure updates, monitoring, and logging__
   - In the __Platform software__ section, under __Environment properties__, add the following items
     - `MYSQL_USER` = `admin`
     - `MYSQL_PASSWORD` = \<MYSQL_PASSWORD\>
