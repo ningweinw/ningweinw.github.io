@@ -60,7 +60,7 @@ ab -h
 - Right-click __Domain__, select __Copy link__, paste the value in a notepad or text file
 - Observe the resources that have been created automatically including the EC2, Security Group, Load Balancer, Target Group
 
-### 6. Update the Auto Scaling Settings
+### 5. Update the Auto Scaling Settings
 - Choose environment *Lab-eb-env*, __Configuration__, click __Edit__ in the __Instance traffic and scaling__ section. Update the following settings, under Scaling triggers, to reduce the waiting time for auto scaling
   - Period: `1` Min
   - Breach duration: `1` Min
@@ -68,13 +68,13 @@ ab -h
   - Lower threshold: `1000` Bytes
 - __Apply__
 
-### 7. Simulate Web Traffic
+### 6. Simulate Web Traffic
 On the Traffic Simulation server, run the following command:
 ```
 ab -c 2 -n 1000000 <Environment URL from Step 5>
 ```
 
-### 8. Observe Auto Scaling
+### 7. Observe Auto Scaling
 - Wait for 5 minutes, choose environment *Labeb-env*, __Health__, observe the number of EC2 instances
 - Choose __Event__, observe the event records
 - Choose __Monitoring__, observe the metrics
