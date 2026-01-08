@@ -43,6 +43,7 @@ ab -h
 ### 4. Deploy the Web Application
 - Choose __Elastic Beanstalk__, __Create Application__ with the name: `lab-eb`
 - __Platform__: *Python*
+- __Platform branch__: *Python 3.13 running on 64bit Amazon Linux 2023*
 - __Upload your code__: select *Local file* and upload the *eb-azurevote.zip* downloaded in task 2
 - __Version label__: *v1*
 - __Presets__: select *High availability*
@@ -50,7 +51,7 @@ ab -h
   - For Service role, choose *LabRole*
   - If the environment is in the us-east-1 AWS Region, for EC2 key pair, choose *vockey*
   - For EC2 instance profile, choose *LabInstanceProfile*
-- Click __Next__ twice. In step __Configure updates, monitoring, and logging__
+- Click __Next__ three times. In step __Configure updates, monitoring, and logging__
   - In the __Platform software__ section, under __Environment properties__, add the following items
     - `MYSQL_USER` = `admin`
     - `MYSQL_PASSWORD` = \<MYSQL_PASSWORD\>
