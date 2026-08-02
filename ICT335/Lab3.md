@@ -15,21 +15,25 @@ The architecture is illustrated in the following diagram.
   - Availability zones: *us-east-1b*, *us-east-1c*
   - Subnets: the two private subnets created in the previous lab
 - __Create database__, with the following attributes:
-  - *Standard create*
-  - *MySQL*, keep the default version
-  - Templates: *Sandbox*
+  - *Full configuration*
+  - *MySQL*
+  - Templates: *Free tier*
+  - Deployment options: *Single-AZ DB instance deployment (1 instance)*
+  - Keep the default version
   - DB instance ID: `database-1`
-  - Master username and password: `admin` / \<MYSQL_PASSWORD\>
+  - Master username and password (*Self managed*): `admin` / \<MYSQL_PASSWORD\>
+  - Password authentication
   - Storage
-    - Allocated storage: `5` GB
     - Disable __Storage autoscaling__
   - Connectivity
     - VPC: *lab-vpc*
     - Subnet group: *lab-vpc-subnet-group*
     - Public access: *No*
     - VPC security group: *default*
-  - Password authentication
-  - Additional configuration: disable backup, disable encryption
+  - Monitoring
+    - Disable __Enhanced Monitoring__ 
+  - Additional configuration
+    - Disable: __Backup__, __encryption__
 - After the database is created, enable incoming MySQL traffic
   - Choose *database-1*, choose the Security group, edit inbound rules, add the following rule:
     - Type: *MYSQL/Aurora*, Source: *Anywhere-IPv4*
