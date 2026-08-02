@@ -2,15 +2,11 @@
 
 # install packages
 apt update
+apt install python3-venv python3-full -y
 
 # packages for CLI tools
 apt install -y mysql-client
 apt install -y stress
-
-# packages for python web app
-apt install -y python3-pip
-pip3 install flask==2.3.3
-pip3 install flask-mysql==1.4.0
 
 # set up server files
 mkdir /app
@@ -22,14 +18,22 @@ tar xvf azure-vote.tar
 cat > /app/azure-vote/start.sh << EOF
 #!/bin/sh
 
+cd /app/azure-vote
+. .venv/bin/activate
 export MYSQL_USER="admin"
 export MYSQL_PASSWORD="<MYSQL_PASSWORD>"
 export MYSQL_HOST="<MYSQL_HOST>"
-cd /app/azure-vote
 python3 main.py &
 EOF
 
 chmod +x /app/azure-vote/start.sh
+
+# setup Python
+cd /app/azure-vote
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install flask==2.3.3
+pip3 install flask-mysql==1.4.0
 
 # enable auto start
 cat > /etc/systemd/system/azure-vote.service << EOF
