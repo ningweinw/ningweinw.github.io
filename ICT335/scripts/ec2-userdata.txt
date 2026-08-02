@@ -31,7 +31,7 @@ chmod +x /app/azure-vote/start.sh
 # setup Python
 cd /app/azure-vote
 python3 -m venv .venv
-source .venv/bin/activate
+. .venv/bin/activate
 pip3 install flask==2.3.3
 pip3 install flask-mysql==1.4.0
 
